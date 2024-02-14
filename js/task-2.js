@@ -8,17 +8,15 @@ class Storage {
     }
     
     addItem(newItem) {
-        return this.#items.push(newItem);
+        this.#items.push(newItem);
     }
     
     removeItem(itemToRemove) {
-       const index = this.#items.indexOf(itemToRemove);
-       return this.#items.splice(index, 1);
+        this.#items = this.#items.filter(item => item !== itemToRemove)
     }
 }
 
-//OR removeItem(itemToRemove) {
-// this.#items = this.#items.filter(item => item !== itemToRemove) }
+
 
 
 
